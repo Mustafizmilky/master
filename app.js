@@ -82,3 +82,4 @@ equal.addEventListener("click", function (e) {
 
 // calculator project finished
 console.dir(document);
+console.log("helo");
