@@ -112,3 +112,13 @@ const restaurant = {
     return [this.starterMenu[staterIndex], this.mainMenu[mainIndex]];
   },
 };
+
+const dog = {
+  firstName: "bite",
+};
+const changeName = { ...dog };
+dog.firstName = "rat";
+dog.age = { birth: 1998 };
+dog.age.birth = 1999;
+
+console.log(dog, changeName);
