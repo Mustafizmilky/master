@@ -81,3 +81,76 @@ equal.addEventListener("click", function (e) {
 });
 
 // calculator project finished
+
+const toDoBtn = document.querySelector(".todo-btn");
+const newList = document.querySelector(".todo-container");
+
+const toDoFunction = function () {
+  toDoBtn.addEventListener("click", function () {
+    const html = `  <div class="grid grid-cols-12 bg-slate-50 rounded-md shadow-md">
+    <!-- tick mark  -->
+    <div class="p-5 hidden md:block">
+      <div
+        class="h-4 w-4 bg-slate-200 border shadow-sm border-slate-300 rounded-sm"
+      ></div>
+    </div>
+    <!-- to do container  -->
+    <div
+      class="col-start-2 col-end-13 p-2 md:p-4 text-slate-700 flex flex-col gap-8"
+    >
+      <!-- semi heading design  -->
+      <div class="flex flex-col gap-4">
+        <h3 class="text-lg font-bold md:text-left text-center ">Design sign up flow</h3>
+        <p class="text-sm">
+          By the time a prospect arrives at your signup page, in
+          most cases, they have already evaluate Lorem ipsum dolor
+          sit amet consectetur adipisicing elit. Impedit tempora
+          molestiae minus aperiam eaque tempore quam quo deleniti
+          repellendus praesentium, nulla ab laborum, natus quae
+          dolorum quia adipisci veniam modi.
+        </p>
+      </div>
+      <!-- icon design  -->
+      <div class="flex flex-row justify-between items-center">
+        <div
+          class="flex flex-row gap-1 items-center border rounded-md px-2"
+        >
+          <img
+            src="3-11/canvas-color-svgrepo-com.svg"
+            alt=""
+            class="w-3 h-3"
+          />
+          <p class="text-xs font-semibold">Design</p>
+        </div>
+        <div class="flex flex-row gap-2">
+          <div class="">
+            <p
+              class="flex flex-row gap-1 items-center rounded-lg px-3"
+            >
+              <img
+                src="3-11/attachment-svgrepo-com.svg"
+                alt=""
+                class="w-3 h-3"
+              /><span>1</span>
+            </p>
+          </div>
+          <div class="">
+            <p
+              class="flex flex-row gap-1 items-center rounded-lg px-3"
+            >
+              <img
+                src="3-11/comment-svgrepo-com.svg"
+                alt=""
+                class="w-3 h-3"
+              /><span>3</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>`;
+    newList.insertAdjacentHTML("afterbegin", html);
+  });
+};
+
+toDoFunction();
