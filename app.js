@@ -154,3 +154,27 @@ const toDoFunction = function () {
 };
 
 toDoFunction();
+
+//
+console.log(typeof NaN);
+console.log(Number.isNaN("the"));
+console.log(Number.isFinite(20));
+
+const ee = ["a", "b", "c", "d", "e", "f", "g"];
+
+ee.forEach((v, i) => {
+  i % 3 === 0 ? console.log(v) : null;
+});
+console.log(navigator.language);
+
+const date = new Date();
+// console.log(date);
+const options = {
+  weekday: "long",
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+};
+
+console.log(new Intl.DateTimeFormat(navigator.language, options).format(date));
+console.log(data);
