@@ -33,7 +33,7 @@ const data = [
   {
     id: "sanitarium-almond-milk",
     name: "Almond Milk",
-    "nutrition-per-100ml": {
+    "nutrition-per-100g": {
       energy: 130,
       protein: 0.5,
       fat: 1.2,
@@ -54,7 +54,7 @@ const data = [
   {
     id: "coles-soy-milk-regular",
     name: "Soy Milk",
-    "nutrition-per-100ml": {
+    "nutrition-per-100g": {
       energy: 244,
       protein: 3.1,
       fat: 3.0,

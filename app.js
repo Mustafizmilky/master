@@ -156,25 +156,72 @@ const toDoFunction = function () {
 toDoFunction();
 
 //
-console.log(typeof NaN);
-console.log(Number.isNaN("the"));
-console.log(Number.isFinite(20));
 
-const ee = ["a", "b", "c", "d", "e", "f", "g"];
+//food app
 
-ee.forEach((v, i) => {
-  i % 3 === 0 ? console.log(v) : null;
-});
-console.log(navigator.language);
+const mainContainer = document.querySelector(".main-container");
+const btnShop = document.querySelector(".btn-shop");
+const detailsBtn = document.querySelectorAll(".details-btn");
 
-const date = new Date();
-// console.log(date);
-const options = {
-  weekday: "long",
-  year: "numeric",
-  month: "long",
-  day: "numeric",
+let index = 4;
+
+// display render on DOM function
+
+const displayUI = function (array) {
+  array.forEach((v, i) => {
+    const lengthOfNut = Object.keys(v["nutrition-per-100g"]).length;
+    console.log(lengthOfNut);
+
+    //put the html sting on the dom
+    const html = `  <div class="bg-slate-50 rounded-t-xl shadow-lg">
+    <div class="w-full flex justify-center">
+      <img
+        src="3-13/1.jpg"
+        alt=""
+        class="w-30 h-30 opacity-50 py-2 px-1 mb-5 rounded-t-xl"
+      />
+    </div>
+    <div class="w-full h-1 bg-slate-100 mb-5"></div>
+
+    <div class="text-center px-2 mb-3">
+      <h2 class="text-xl text-slate-700 font-semibold mb-2">
+        ${v.name}
+      </h2>
+      <p class="text-xs mb-10">
+        There are around <span class=" font-bold bg-green-100 rounded-md p-1">${lengthOfNut} ingredients  </span> of this food. Click for
+        details
+      </p>
+    </div>
+    <button
+      class="px-4 py-2 bg-green-400  text-slate-700 w-full text-xl font-extrabold details-btn" data-tab= '${
+        i + 1
+      }'
+    >
+      Details
+    </button>
+  </div>`;
+
+    // insert the html on the main container
+    mainContainer.insertAdjacentHTML("beforeend", html);
+  });
 };
 
-console.log(new Intl.DateTimeFormat(navigator.language, options).format(date));
-console.log(data);
+//auto load 2 items in DOM during open the page
+const shopData = function (arr) {
+  const newarr = arr.slice(0, 2);
+  displayUI(newarr);
+
+  // button click
+  btnShop.addEventListener("click", function (e) {
+    mainContainer.innerHTML = "";
+    let slice = arr.slice(0, index);
+
+    displayUI(slice);
+    btnShop.scrollIntoView(btnShop);
+
+    index = index + 4;
+    console.log(detailsBtn);
+  });
+};
+
+shopData(data);
