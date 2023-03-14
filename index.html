@@ -16,7 +16,7 @@
 
     <title>Milky Master file</title>
   </head>
-  <body>
+  <body class="">
     <!-- skype project of milky  -->
 
     <section id="march3-2 font-sans">
@@ -526,55 +526,61 @@
     </section>
 
     <!-- food container desing and programming  -->
-    <section id="3-13-food">
-      <div class="bg-slate-50 min-h-screen p-10">
+    <!-- =================================================================================== -->
+    <section id="3-13-food ">
+      <div class="bg-slate-50 p-4 md:p-10 min-h-full">
         <!-- main container   -->
 
         <div class="">
-          <div class="grid md:grid-cols-12 gap-2">
+          <div class="grid grid-cols-4 md:grid-cols-12 gap-2">
             <!-- side container for filter  -->
             <div
-              class="col-span-3 bg-yellow-100 p-3 rounded-md shadow-md"
+              class="col-span-1 md:col-span-2 bg-green-50 p-3 rounded-md shadow-md"
             ></div>
             <!-- Main container for cart and button   -->
-            <div class="col-span-9 bg-slate-100 rounded-md shadow-md">
+            <div
+              class="col-span-3 md:col-span-10 bg-slate-100 rounded-md shadow-md"
+            >
               <!-- cart container -->
               <div
-                class="grid md:grid-cols-2 md:gap-4 py-6 px-8 main-container mb-10"
+                class="grid gap-2 md:grid-cols-2 md:gap-4 py-6 px-8 mb-10 relative main-container"
               >
                 <!-- cart design  -->
+                <!-- cart will be loaded from the JS script and i have put the html there  -->
 
-                <!-- 1st cart  -->
-                <!-- <div class="bg-slate-50 rounded-t-xl shadow-lg">
-                  <div class="w-full flex justify-center">
-                    <img
-                      src="3-13/1.jpg"
-                      alt=""
-                      class="w-30 h-30 opacity-50 py-2 px-1 mb-5 rounded-t-xl"
-                    />
+                <!-- below is the container of nutration auto  -->
+                <!-- <div
+                  class="space-y-10 shadow-md rounded-xl absolute top-10 left-1/2 bg-blue-50 -translate-x-1/2 z-10 py-12 px-6 nutration-container text-slate-700"
+                >
+                  <div class="bg-emerald-200">
+                    <h3 class="text-2xl text-slate-700 font-bold text-center">
+                      Food Nutritional Table
+                    </h3>
                   </div>
-                  <div class="w-full h-1 bg-slate-100 mb-5"></div>
 
-                  <div class="text-center px-2 mb-3">
-                    <h2 class="text-lg text-slate-700 font-semibold">
-                      Muesli (Almond)
-                    </h2>
-                    <p class="text-xs">
-                      There are around 25 ingredients of the foods. Click for
-                      details
-                    </p>
+                  <div class="grid grid-cols-2 gap-3 px-6 p-2 mb-10">
+                    <p class="font-bold text-sm">Nutrient</p>
+                    <p class="font-bold text-sm">Amount per 100/g of food</p>
+                    <p class="text-xs">Nutrient</p>
                   </div>
-                  <button
-                    class="px-4 py-2 bg-green-400 text-slate-700 w-full text-xl font-extrabold details-btn" data-tab= '${i}'
-                  >
-                    Details
-                  </button>
+                  <div class="text-center">
+                    <button
+                      class="bg-green-300 font-bold text-md px-10 py-2 rounded-md text-slate-700"
+                    >
+                      close
+                    </button>
+                  </div>
                 </div> -->
+
+                <!-- overlay -->
+                <!-- <div
+                  class="min-h-screen w-full absolute top-0 left-0 bg-slate-500 opacity-30 z-0"
+                ></div> -->
               </div>
               <!-- button container -->
               <div class="p-3 text-center">
                 <button
-                  class="btn-shop px-4 py-2 bg-slate-300 font-bold text-sm"
+                  class="px-4 py-2 bg-green-300 font-bold text-sm rounded-md btn-shop"
                 >
                   Load More
                 </button>

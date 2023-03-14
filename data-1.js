@@ -2,7 +2,7 @@ const data = [
   {
     id: "coles-muslie-almond",
     name: "Muesli (Almond)",
-    "nutrition-per-100g": {
+    nutrition: {
       energy: 1560,
       protein: 12.3,
       fat: 9.9,
@@ -17,7 +17,7 @@ const data = [
   {
     id: "coles-rolled-oats-wholegrain",
     name: "Wholegrain Rolled Oats",
-    "nutrition-per-100g": {
+    nutrition: {
       energy: 1680,
       protein: 13.3,
       fat: 9.8,
@@ -33,7 +33,7 @@ const data = [
   {
     id: "sanitarium-almond-milk",
     name: "Almond Milk",
-    "nutrition-per-100g": {
+    nutrition: {
       energy: 130,
       protein: 0.5,
       fat: 1.2,
@@ -54,7 +54,7 @@ const data = [
   {
     id: "coles-soy-milk-regular",
     name: "Soy Milk",
-    "nutrition-per-100g": {
+    nutrition: {
       energy: 244,
       protein: 3.1,
       fat: 3.0,
@@ -72,7 +72,7 @@ const data = [
   {
     id: "simply-better-organic-tofu-plain-firm",
     name: "Firm Tofu",
-    "nutrition-per-100g": {
+    nutrition: {
       energy: 615,
       protein: 15.9,
       fat: 8.8,
@@ -88,7 +88,7 @@ const data = [
   {
     id: "sss-hummus-dip",
     name: "Hummus",
-    "nutrition-per-100g": {
+    nutrition: {
       energy: 709,
       protein: 8.4,
       fat: 10.8,
@@ -103,7 +103,7 @@ const data = [
   {
     id: "coles-hummus-lite",
     name: "Hummus (Lite)",
-    "nutrition-per-100g": {
+    nutrition: {
       energy: 696,
       protein: 5.0,
       fat: 9.3,
@@ -117,7 +117,7 @@ const data = [
   {
     id: "coles-hummus",
     name: "Hummus",
-    "nutrition-per-100g": {
+    nutrition: {
       energy: 1091,
       protein: 5.6,
       fat: 19.2,
@@ -131,7 +131,7 @@ const data = [
   {
     id: "sanitarium-natural-peanut-butter-crunchy",
     name: "Peanut Butter",
-    "nutrition-per-100g": {
+    nutrition: {
       energy: 2580,
       protein: 28,
       fat: 50,
@@ -152,7 +152,7 @@ const data = [
   {
     id: "macro-organic-peanut-butter-crunchy",
     name: "Peanut Butter",
-    "nutrition-per-100g": {
+    nutrition: {
       energy: 2670,
       protein: 28.4,
       fat: 50.9,
@@ -169,7 +169,7 @@ const data = [
   {
     id: "macro-organic-tahini-unhulled",
     name: "Tahini",
-    "nutrition-per-100g": {
+    nutrition: {
       energy: 2760,
       protein: 25.6,
       fat: 57.3,
@@ -186,7 +186,7 @@ const data = [
   {
     id: "coles-butter-beans-organic",
     name: "Butter Beans",
-    "nutrition-per-100g": {
+    nutrition: {
       energy: 384,
       protein: 7.4,
       fat: 0.9,
@@ -201,7 +201,7 @@ const data = [
   {
     id: "coles-red-kidney-beans-organic",
     name: "Kidney Beans",
-    "nutrition-per-100g": {
+    nutrition: {
       energy: 370,
       protein: 5.2,
       fat: 0.4,
@@ -216,7 +216,7 @@ const data = [
   {
     id: "coles-chick-peas-organic",
     name: "Chickpeas",
-    "nutrition-per-100g": {
+    nutrition: {
       energy: 391,
       protein: 8,
       fat: 0.5,
@@ -231,7 +231,7 @@ const data = [
   {
     id: "coles-lentils",
     name: "Lentils",
-    "nutrition-per-100g": {
+    nutrition: {
       energy: 290,
       protein: 4.2,
       fat: 0.9,
@@ -246,7 +246,7 @@ const data = [
   {
     id: "edgell-cannellini-beans",
     name: "Cannellini Beans",
-    "nutrition-per-100g": {
+    nutrition: {
       energy: 438,
       protein: 7.4,
       fat: 0.8,
@@ -261,7 +261,7 @@ const data = [
   {
     id: "fruit-kiwifruit-fresh-raw",
     name: "Kiwifruit",
-    "nutrition-per-100g": {
+    nutrition: {
       energy: 61,
       carbohydrate: 14.66,
       sugars: 8.99,
@@ -274,7 +274,7 @@ const data = [
   {
     id: "fruit-apple-granny-smith-fresh-raw",
     name: "Apple (Granny Smith)",
-    "nutrition-per-100g": {
+    nutrition: {
       energy: 218,
       carbohydrate: 13.81,
       sugars: 10.39,
@@ -300,7 +300,7 @@ const data = [
   {
     id: "fruit-apple-pink-lady-fresh-raw",
     name: "Apple (Pink Lady)",
-    "nutrition-per-100g": {
+    nutrition: {
       energy: 218,
       carbohydrate: 13.81,
       sugars: 10.39,
@@ -313,7 +313,7 @@ const data = [
   {
     id: "fruit-banana-fresh-raw",
     name: "Banana",
-    "nutrition-per-100g": {
+    nutrition: {
       energy: 371,
       carbohydrate: 22.84,
       sugars: 12.23,
@@ -329,7 +329,7 @@ const data = [
   {
     id: "fruit-orange-navel-fresh-raw",
     name: "Navel Orange",
-    "nutrition-per-100g": {
+    nutrition: {
       energy: 192,
       carbohydrate: 11.75,
       sugars: 9.35,
@@ -343,7 +343,7 @@ const data = [
   {
     id: "fruit-avocado-fresh",
     name: "Avocado",
-    "nutrition-per-100g": {
+    nutrition: {
       energy: 670,
       carbohydrate: 8.53,
       sugars: 0.66,
@@ -368,7 +368,7 @@ const data = [
   {
     id: "veg-broccoli-fresh",
     name: "Broccoli",
-    "nutrition-per-100g": {
+    nutrition: {
       energy: 141,
       carbohydrate: 6.64,
       sugars: 1.7,
@@ -388,7 +388,7 @@ const data = [
   {
     id: "veg-spinach-fresh",
     name: "Spinach",
-    "nutrition-per-100g": {
+    nutrition: {
       energy: 97,
       carbohydrate: 3.6,
       sugars: 0.4,
@@ -413,7 +413,7 @@ const data = [
   {
     id: "veg-baby-spinach-leaves-fresh",
     name: "Baby Spinach",
-    "nutrition-per-100g": {
+    nutrition: {
       energy: 97,
       carbohydrate: 3.6,
       sugars: 0.4,
@@ -438,7 +438,7 @@ const data = [
   {
     id: "veg-bok-choy-fresh",
     name: "Bok Choy",
-    "nutrition-per-100g": {
+    nutrition: {
       energy: 54,
       carbohydrate: 2.2,
       "dietary-fibre": 1,
@@ -453,7 +453,7 @@ const data = [
   {
     id: "veg-brussels-sprout-raw",
     name: "Brussels Sprouts",
-    "nutrition-per-100g": {
+    nutrition: {
       energy: 179,
       carbohydrate: 8.95,
       sugars: 2.2,
@@ -473,7 +473,7 @@ const data = [
   {
     id: "veg-sweet-potato-fresh",
     name: "Sweet Potato",
-    "nutrition-per-100g": {
+    nutrition: {
       energy: 359,
       carbohydrate: 20.1,
       sugars: 4.2,
@@ -491,7 +491,7 @@ const data = [
   {
     id: "veg-eggplant-fresh",
     name: "Eggplant",
-    "nutrition-per-100g": {
+    nutrition: {
       energy: 104,
       carbohydrate: 5.88,
       sugars: 3.53,
@@ -505,7 +505,7 @@ const data = [
   {
     id: "veg-mushrooms-cup-fresh",
     name: "Cup Mushrooms",
-    "nutrition-per-100g": {
+    nutrition: {
       energy: 113,
       carbohydrate: 4.1,
       fat: 0.1,
@@ -522,7 +522,7 @@ const data = [
   {
     id: "veg-cucumber-continental-fresh",
     name: "Cucumber",
-    "nutrition-per-100g": {
+    nutrition: {
       energy: 65,
       carbohydrate: 3.63,
       sugars: 1.67,
@@ -536,7 +536,7 @@ const data = [
   {
     id: "veg-capsicum-red-fresh",
     name: "Red Capcicum",
-    "nutrition-per-100g": {
+    nutrition: {
       energy: 84,
       carbohydrate: 4.64,
       sugars: 2.4,
@@ -551,7 +551,7 @@ const data = [
   {
     id: "coles-dried-apricots",
     name: "Dried Apricots",
-    "nutrition-per-100g": {
+    nutrition: {
       energy: 1130,
       protein: 2.8,
       fat: 1.0,
@@ -566,7 +566,7 @@ const data = [
   {
     id: "coles-almonds-natural",
     name: "Almonds",
-    "nutrition-per-100g": {
+    nutrition: {
       energy: 2575,
       protein: 24.1,
       fat: 53.5,
@@ -585,7 +585,7 @@ const data = [
   {
     id: "coles-walnuts-natural-californian",
     name: "Walnuts",
-    "nutrition-per-100g": {
+    nutrition: {
       energy: 2938,
       protein: 15.9,
       fat: 69.2,
@@ -603,7 +603,7 @@ const data = [
   {
     id: "coles-cashews-salted",
     name: "Cashews",
-    "nutrition-per-100g": {
+    nutrition: {
       energy: 2530,
       protein: 19.6,
       fat: 48.8,
@@ -617,7 +617,7 @@ const data = [
   {
     id: "coles-flaxseed",
     name: "Flaxseed",
-    "nutrition-per-100g": {
+    nutrition: {
       energy: 1900,
       protein: 18,
       fat: 34,
@@ -633,7 +633,7 @@ const data = [
   {
     id: "seed-pumpkin-dried",
     name: "Pumpkin Seeds",
-    "nutrition-per-100g": {
+    nutrition: {
       energy: 721,
       protein: 30.23,
       fat: 49.05,
@@ -656,7 +656,7 @@ const data = [
   {
     id: "mission-wraps-wholegrain",
     name: "Wholegrain Wraps",
-    "nutrition-per-100g": {
+    nutrition: {
       energy: 1330,
       protein: 8.5,
       fat: 9.4,
@@ -674,7 +674,7 @@ const data = [
   {
     id: "sanremo-wholegrain-pasta",
     name: "Wholegrain Pasta",
-    "nutrition-per-100g": {
+    nutrition: {
       energy: 1390,
       protein: 13,
       fat: 2.5,
@@ -689,7 +689,7 @@ const data = [
   {
     id: "sunrice-brown-rice-uncooked",
     name: "Brown Rice",
-    "nutrition-per-100g": {
+    nutrition: {
       energy: 1490,
       protein: 7.6,
       fat: 2.6,
@@ -710,7 +710,7 @@ const data = [
   {
     id: "pureharvest-organic-rice-cakes",
     name: "Rice Cakes",
-    "nutrition-per-100g": {
+    nutrition: {
       energy: 1620,
       protein: 7.9,
       fat: 3.2,
@@ -729,7 +729,7 @@ const data = [
   {
     id: "arnotts-vita-wheat-rice-crackers-multigrain",
     name: "Rice Crackers",
-    "nutrition-per-100g": {
+    nutrition: {
       energy: 1960,
       protein: 8.8,
       fat: 12.8,
@@ -744,7 +744,7 @@ const data = [
   {
     id: "supl-protein-pea-rice-mix",
     name: "Rice+Pea Protein Powder",
-    "nutrition-per-100g": {
+    nutrition: {
       energy: 1490.5,
       protein: 81.65,
       carbohydrate: 3.8,
@@ -755,7 +755,7 @@ const data = [
   {
     id: "sweet-william-choc-original",
     name: "Sweet William Chocolate",
-    "nutrition-per-100g": {
+    nutrition: {
       energy: 2160,
       protein: 7.9,
       fat: 31,
@@ -773,7 +773,7 @@ const data = [
   {
     id: "red-rock-chips-chilli-salt",
     name: "Chips (Chilli & Sea Salt)",
-    "nutrition-per-100g": {
+    nutrition: {
       energy: 2050,
       protein: 7.9,
       fat: 23.4,

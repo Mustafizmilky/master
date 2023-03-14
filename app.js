@@ -158,10 +158,11 @@ toDoFunction();
 //
 
 //food app
+//--------------------------------------------------------------------------------------------------------
+// =============================================================================================================
 
 const mainContainer = document.querySelector(".main-container");
 const btnShop = document.querySelector(".btn-shop");
-const detailsBtn = document.querySelectorAll(".details-btn");
 
 let index = 4;
 
@@ -169,16 +170,15 @@ let index = 4;
 
 const displayUI = function (array) {
   array.forEach((v, i) => {
-    const lengthOfNut = Object.keys(v["nutrition-per-100g"]).length;
-    console.log(lengthOfNut);
+    const lengthOfNut = Object.keys(v["nutrition"]).length;
 
     //put the html sting on the dom
-    const html = `  <div class="bg-slate-50 rounded-t-xl shadow-lg">
+    const html = `  <div class="bg-slate-50 rounded-t-xl shadow-lg ">
     <div class="w-full flex justify-center">
       <img
-        src="3-13/1.jpg"
+        src="3-13/1.jpeg"
         alt=""
-        class="w-30 h-30 opacity-50 py-2 px-1 mb-5 rounded-t-xl"
+        class="w-1/2  opacity-50 py-2 px-1 mb-5 rounded-t-xl"
       />
     </div>
     <div class="w-full h-1 bg-slate-100 mb-5"></div>
@@ -193,11 +193,9 @@ const displayUI = function (array) {
       </p>
     </div>
     <button
-      class="px-4 py-2 bg-green-400  text-slate-700 w-full text-xl font-extrabold details-btn" data-tab= '${
-        i + 1
-      }'
+      class="px-4 py-2 bg-red-500 border border-zinc-600 text-slate-700 w-full text-xl font-extrabold details-btn" data-tab= '${v.id}'
     >
-      Details
+      Details Nutrition
     </button>
   </div>`;
 
@@ -219,9 +217,82 @@ const shopData = function (arr) {
     displayUI(slice);
     btnShop.scrollIntoView(btnShop);
 
-    index = index + 4;
-    console.log(detailsBtn);
+    index = index + 2;
   });
 };
 
 shopData(data);
+
+//capitalize function
+
+// adding the click event on detials btn select the main container and did the bubling
+
+const detailsBtnCtn = function (arr) {
+  mainContainer.addEventListener("click", function (e) {
+    const clicked = e.target.classList.contains("details-btn");
+
+    if (clicked) {
+      const btnData = e.target.dataset.tab;
+      arr.forEach((food, index) => {
+        if (food.id === btnData) {
+          const { nutrition } = arr.find((nut) => nut.id === btnData);
+
+          const keys = Object.keys(nutrition).reduce((a, v, i) => {
+            a.push(v[0].toUpperCase() + v.slice(1));
+            return a;
+          }, []);
+          const value = Object.values(nutrition);
+
+          const html = `     <div
+            class="space-y-10 shadow-md rounded-xl absolute  left-1/2 bg-blue-50 -translate-x-1/2 z-10 py-12 px-6 nutration-container text-slate-700 w-full "
+          >
+            <div class="bg-emerald-200">
+              <h3 class="text-2xl text-slate-700 font-bold text-center">
+                Food Nutritional Table
+              </h3>
+            </div>
+  
+            <div class="grid grid-cols-2 px-6 p-2 mb-10  indg-container ">
+              <p class="font-bold text-sm mb-2">Nutrient</p>
+              <p class="font-bold text-sm mb-2">Amount per 100/g of food</p>
+              
+            </div>
+            <div class="text-center">
+              <button
+                class="bg-green-300 font-bold text-md px-10 py-2 rounded-md text-slate-700 nutrient-close"
+              >
+                close
+              </button>
+            </div>
+          </div>`;
+
+          mainContainer.insertAdjacentHTML("beforeend", html);
+
+          //adding the ingrideint in the DOM by looping the ingrident object
+          const indgContainerEl = document.querySelector(".indg-container");
+
+          keys.forEach((ing, index) => {
+            const ingHtml = `<p class="text-xs bg-red-200 font-bold mb-2 p-1">${ing}</p>
+            <p class="text-xs bg-red-200 mb-2 p-1">${value[index]}</p>`;
+
+            indgContainerEl.insertAdjacentHTML("beforeend", ingHtml);
+          });
+
+          mainContainer.scrollIntoView(mainContainer);
+
+          //adding the close function of ingrident details box
+          const nutrationContainerEL = document.querySelector(
+            ".nutration-container"
+          );
+          const nutrientCloseEL = document.querySelector(".nutrient-close");
+          nutrientCloseEL.addEventListener("click", function (e) {
+            nutrationContainerEL.remove();
+            btnShop.scrollIntoView(btnShop);
+          });
+        }
+      });
+    }
+  });
+};
+
+detailsBtnCtn(data);
