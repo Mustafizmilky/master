@@ -535,7 +535,7 @@
           <div class="grid grid-cols-4 md:grid-cols-12 gap-2">
             <!-- side container for filter  -->
             <div
-              class="col-span-1 md:col-span-2 bg-green-50 p-3 rounded-md shadow-md"
+              class="col-span-1 md:col-span-2 bg-green-50 p-3 rounded-md shadow-md side-container"
             ></div>
             <!-- Main container for cart and button   -->
             <div
@@ -573,9 +573,9 @@
                 </div> -->
 
                 <!-- overlay -->
-                <!-- <div
-                  class="min-h-screen w-full absolute top-0 left-0 bg-slate-500 opacity-30 z-0"
-                ></div> -->
+                <div
+                  class="fixed top-0 left-0 bg-slate-500 opacity-30 blur-xl z-0 hidden overlay"
+                ></div>
               </div>
               <!-- button container -->
               <div class="p-3 text-center">
@@ -586,6 +586,375 @@
                 </button>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="3-16" class="mt-10">
+      <div class="min-h-screen bg-slate-300 p-10">
+        <!-- main container of the front  -->
+        <div class="container grid grid-cols-12 mx-auto">
+          <!-- side container design  -->
+          <!-- side container first container  -->
+          <div class="col-span-3 bg-slate-50 rounded-l-lg p-3 min-h-screen">
+            <!-- dash design  -->
+            <div class="flex flex-rows items-center gap-1 mb-5">
+              <img
+                src="3-16/plus-square-svgrepo-com.svg "
+                alt=""
+                class="w-5 h-5 bg-sky-900 rounded-md"
+              />
+              <p class="text-sm font-semibold flex-1 text-slate-700">Dash</p>
+              <img
+                src="3-16/bell-svgrepo-com.svg "
+                alt=""
+                class="w-5 h-5 bg-slate-100 rounded-md p-1"
+              />
+              <img
+                src="3-16/dot-small-svgrepo-com.svg "
+                alt=""
+                class="w-3 h-3 bg-slate-100 rounded-xl ring-2 ring-sky-900 p-1"
+              />
+            </div>
+
+            <!-- nav design  -->
+            <div class="flex flex-col gap-1 mb-5">
+              <!-- home design  -->
+              <div class="group">
+                <div
+                  class="flex flex-rows justify-start items-center gap-3 pl-1 text-slate-400 cursor-pointer group group-hover:bg-sky-900 transition-all duration-300"
+                >
+                  <img
+                    src="3-16/home-svgrepo-com.svg"
+                    alt=""
+                    class="w-6 h-6 rounded-sm bg-slate-100 group-hover:bg-sky-900 transition-all duration-300"
+                  />
+                  <p class="text-xs font-normal">Home</p>
+                </div>
+              </div>
+              <!-- inbox design  -->
+              <div class="group">
+                <div
+                  class="flex flex-rows justify-start items-center gap-3 pl-1 text-slate-400 cursor-pointer group group-hover:bg-sky-900 transition-all duration-300"
+                >
+                  <img
+                    src="3-16/inbox-svgrepo-com.svg"
+                    alt=""
+                    class="w-6 h-6 rounded-sm bg-slate-100 group-hover:bg-sky-900 transition-all duration-300"
+                  />
+                  <p class="text-xs font-normal">Inbox</p>
+                </div>
+              </div>
+              <!-- search design  -->
+              <div class="group">
+                <div
+                  class="flex flex-rows justify-start items-center gap-3 pl-1 text-slate-400 cursor-pointer group group-hover:bg-sky-900 transition-all duration-300"
+                >
+                  <img
+                    src="3-16/search-svgrepo-com.svg"
+                    alt=""
+                    class="w-6 h-6 rounded-sm bg-slate-100 group-hover:bg-sky-900 transition-all duration-300"
+                  />
+                  <p class="text-xs font-normal">Search</p>
+                </div>
+              </div>
+
+              <!-- new feedback  -->
+              <div class="">
+                <div
+                  class="flex flex-rows justify-start items-center gap-3 pl-1 cursor-pointer"
+                >
+                  <img
+                    src="3-16/plus-square-svgrepo-com.svg"
+                    alt=""
+                    class="w-6 h-6 rounded-md bg-sky-900"
+                  />
+                  <p class="text-xs font-extrabold text-sky-900">
+                    New feedback
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- second container for the side  -->
+
+            <!-- main board design  -->
+            <div class="pl-1 mb-28">
+              <!-- main board container  -->
+              <div class="group mb-2">
+                <div
+                  class="flex flex-rows justify-start items-center gap-3 text-slate-400 cursor-pointer"
+                >
+                  <img
+                    src="3-16/plus-square-svgrepo-com.svg"
+                    alt=""
+                    class="w-6 h-6 rounded-sm bg-slate-100"
+                  />
+                  <p class="text-xs font-normal">Main boards</p>
+                </div>
+              </div>
+              <!-- road map container  -->
+              <div class="group">
+                <div
+                  class="flex flex-rows justify-start items-center gap-3 text-slate-400 cursor-pointer"
+                >
+                  <img
+                    src="3-16/road-map-handout-svgrepo-com.svg"
+                    alt=""
+                    class="w-6 h-6 rounded-sm bg-slate-100"
+                  />
+                  <p class="text-xs font-normal text-slate-700">Roadmap</p>
+                </div>
+              </div>
+              <!-- release note container  -->
+              <div class="group">
+                <div
+                  class="flex flex-rows justify-start items-center gap-3 text-slate-400 cursor-pointer group"
+                >
+                  <img
+                    src="3-16/display-svgrepo-com.svg"
+                    alt=""
+                    class="w-6 h-6 rounded-sm bg-slate-100"
+                  />
+                  <p class="text-xs font-normal text-slate-700">
+                    Release Notes
+                  </p>
+                </div>
+              </div>
+
+              <!-- add view  -->
+              <div class="group mb-2">
+                <div
+                  class="flex flex-rows justify-start items-center gap-3 text-slate-400 cursor-pointer"
+                >
+                  <img
+                    src="3-16/plus-square-svgrepo-com.svg"
+                    alt=""
+                    class="w-6 h-6 rounded-sm bg-slate-100"
+                  />
+                  <p class="text-xs font-normal">Add view</p>
+                </div>
+              </div>
+              <!-- Design board  -->
+              <div class="group mb-2">
+                <div
+                  class="flex flex-rows justify-start items-center gap-3 text-slate-400 cursor-pointer"
+                >
+                  <img
+                    src="3-16/dot-small-svgrepo-com.svg"
+                    alt=""
+                    class="w-6 h-6 rounded-sm bg-slate-100"
+                  />
+                  <p class="text-xs font-normal">Design boards</p>
+                </div>
+              </div>
+              <!-- design system container  -->
+              <div class="group">
+                <div
+                  class="flex flex-rows justify-start items-center gap-3 text-slate-400 cursor-pointer group"
+                >
+                  <img
+                    src="3-16/design-ear-svgrepo-com.svg"
+                    alt=""
+                    class="w-6 h-6 rounded-sm bg-slate-100"
+                  />
+                  <p class="text-xs font-normal text-slate-700">
+                    Design System
+                  </p>
+                </div>
+              </div>
+              <!-- dash design team container  -->
+              <div class="group">
+                <div
+                  class="flex flex-rows justify-start items-center gap-3 text-slate-400 cursor-pointer group"
+                >
+                  <img
+                    src="3-16/flower-svgrepo-com.svg"
+                    alt=""
+                    class="w-6 h-6 rounded-sm bg-slate-100"
+                  />
+                  <p class="text-xs font-normal text-slate-700">
+                    Dash Design Team
+                  </p>
+                </div>
+              </div>
+              <!-- dash  container  -->
+              <div class="group">
+                <div
+                  class="flex flex-rows justify-start items-center gap-3 text-slate-400 cursor-pointer group"
+                >
+                  <img
+                    src="3-16/rocket-svgrepo-com.svg"
+                    alt=""
+                    class="w-6 h-6 rounded-sm bg-slate-100"
+                  />
+                  <p class="text-xs font-normal text-slate-700">Dash 2.0</p>
+                </div>
+              </div>
+              <!-- add view  -->
+              <div class="group mb-2">
+                <div
+                  class="flex flex-rows justify-start items-center gap-3 text-slate-400 cursor-pointer"
+                >
+                  <img
+                    src="3-16/plus-square-svgrepo-com.svg"
+                    alt=""
+                    class="w-6 h-6 rounded-sm bg-slate-100"
+                  />
+                  <p class="text-xs font-normal">Add view</p>
+                </div>
+              </div>
+              <!-- developer -->
+              <div class="group mb-2">
+                <div
+                  class="flex flex-rows justify-start items-center gap-3 text-slate-400 cursor-pointer"
+                >
+                  <img
+                    src="3-16/dot-small-svgrepo-com.svg"
+                    alt=""
+                    class="w-6 h-6 rounded-sm bg-slate-100"
+                  />
+                  <p class="text-xs font-normal">Developers</p>
+                </div>
+              </div>
+              <!-- Front end container  -->
+              <div class="group">
+                <div
+                  class="flex flex-rows justify-start items-center gap-3 text-slate-400 cursor-pointer group"
+                >
+                  <img
+                    src="3-16/display-svgrepo-com.svg"
+                    alt=""
+                    class="w-6 h-6 rounded-sm bg-slate-100"
+                  />
+                  <p class="text-xs font-normal text-slate-700">Front End</p>
+                </div>
+              </div>
+              <!-- back end container  -->
+              <div class="group">
+                <div
+                  class="flex flex-rows justify-start items-center gap-3 text-slate-400 cursor-pointer group"
+                >
+                  <img
+                    src="3-16/server-svgrepo-com.svg"
+                    alt=""
+                    class="w-6 h-6 rounded-sm bg-slate-100"
+                  />
+                  <p class="text-xs font-normal text-slate-700">Back End</p>
+                </div>
+              </div>
+              <!-- bugs  -->
+              <div class="group">
+                <div
+                  class="flex flex-rows justify-start items-center gap-3 text-slate-400 cursor-pointer group"
+                >
+                  <img
+                    src="3-16/animal-bug-domestic-svgrepo-com.svg"
+                    alt=""
+                    class="w-6 h-6 rounded-sm bg-slate-100"
+                  />
+                  <p class="text-xs font-normal text-slate-700">Bugs</p>
+                </div>
+              </div>
+              <!-- add view  -->
+              <div class="group mb-2">
+                <div
+                  class="flex flex-rows justify-start items-center gap-3 text-slate-400 cursor-pointer"
+                >
+                  <img
+                    src="3-16/plus-square-svgrepo-com.svg"
+                    alt=""
+                    class="w-6 h-6 rounded-sm bg-slate-100"
+                  />
+                  <p class="text-xs font-normal">Add view</p>
+                </div>
+              </div>
+              <!-- others view -->
+              <div class="group mb-2">
+                <div
+                  class="flex flex-rows justify-start items-center gap-3 text-slate-400 cursor-pointer"
+                >
+                  <img
+                    src="3-16/dot-small-svgrepo-com.svg"
+                    alt=""
+                    class="w-6 h-6 rounded-sm bg-slate-100"
+                  />
+                  <p class="text-xs font-normal">Other views</p>
+                </div>
+              </div>
+              <!-- target  -->
+              <div class="group">
+                <div
+                  class="flex flex-rows justify-start items-center gap-3 text-slate-400 cursor-pointer group"
+                >
+                  <img
+                    src="3-16/target-svgrepo-com.svg"
+                    alt=""
+                    class="w-6 h-6 rounded-sm bg-slate-100"
+                  />
+                  <p class="text-xs font-normal text-slate-700">Target</p>
+                </div>
+              </div>
+              <!-- add view  -->
+              <div class="group mb-2">
+                <div
+                  class="flex flex-rows justify-start items-center gap-3 text-slate-400 cursor-pointer"
+                >
+                  <img
+                    src="3-16/plus-square-svgrepo-com.svg"
+                    alt=""
+                    class="w-6 h-6 rounded-sm bg-slate-100"
+                  />
+                  <p class="text-xs font-normal">Add view</p>
+                </div>
+              </div>
+            </div>
+            <div class="pl-1">
+              <!-- Learning center  -->
+              <div class="group">
+                <div
+                  class="flex flex-rows justify-start items-center gap-3 text-slate-400 cursor-pointer"
+                >
+                  <img
+                    src="3-16/school-svgrepo-com.svg"
+                    alt=""
+                    class="w-6 h-6 rounded-sm bg-slate-100"
+                  />
+                  <p class="text-xs font-normal">Learning center</p>
+                </div>
+              </div>
+              <!-- contact supports  -->
+              <div class="group">
+                <div
+                  class="flex flex-rows justify-start items-center gap-3 text-slate-400 cursor-pointer"
+                >
+                  <img
+                    src="3-16/question-svgrepo-com.svg"
+                    alt=""
+                    class="w-6 h-6 rounded-sm bg-slate-100"
+                  />
+                  <p class="text-xs font-normal">Contact support</p>
+                </div>
+              </div>
+              <!-- add plus  -->
+              <div class="group mb-2">
+                <div
+                  class="flex flex-rows justify-start items-center gap-3 text-slate-400 cursor-pointer"
+                >
+                  <img
+                    src="3-16/plus-square-svgrepo-com.svg"
+                    alt=""
+                    class="w-6 h-6 rounded-sm bg-slate-100"
+                  />
+                  <p class="hidden md:block text-xs font-normal">
+                    Invite new members
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-span-9 bg-slate-200 min-h-screen rounded-r-lg p-3">
+            main
           </div>
         </div>
       </div>

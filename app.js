@@ -173,12 +173,12 @@ const displayUI = function (array) {
     const lengthOfNut = Object.keys(v["nutrition"]).length;
 
     //put the html sting on the dom
-    const html = `  <div class="bg-slate-50 rounded-t-xl shadow-lg ">
+    const html = `  <div class="bg-slate-100 rounded-xl shadow-lg ">
     <div class="w-full flex justify-center">
       <img
-        src="3-13/1.jpeg"
+        src="3-13/1.jpg"
         alt=""
-        class="w-1/2  opacity-50 py-2 px-1 mb-5 rounded-t-xl"
+        class="h-1/2 opacity-50 py-2 px-1 mb-5 rounded-t-xl"
       />
     </div>
     <div class="w-full h-1 bg-slate-100 mb-5"></div>
@@ -205,56 +205,62 @@ const displayUI = function (array) {
 };
 
 //auto load 2 items in DOM during open the page
+
+let heightofMainContainer;
 const shopData = function (arr) {
   const newarr = arr.slice(0, 2);
   displayUI(newarr);
 
-  // button click
+  // load more button click functions
   btnShop.addEventListener("click", function (e) {
     mainContainer.innerHTML = "";
     let slice = arr.slice(0, index);
 
     displayUI(slice);
     btnShop.scrollIntoView(btnShop);
-
     index = index + 2;
+    // heightofMainContainer = mainContainer.offsetHeight;
   });
 };
-
 shopData(data);
-
-//capitalize function
 
 // adding the click event on detials btn select the main container and did the bubling
 
+const overlayEl = document.querySelector(".overlay");
+
 const detailsBtnCtn = function (arr) {
+  // adding addEventListener in the details nutraition
   mainContainer.addEventListener("click", function (e) {
     const clicked = e.target.classList.contains("details-btn");
 
     if (clicked) {
       const btnData = e.target.dataset.tab;
+
       arr.forEach((food, index) => {
         if (food.id === btnData) {
+          // getting the nutrition object from main object
           const { nutrition } = arr.find((nut) => nut.id === btnData);
 
+          //looping the main json and find the nutrition object and make the array of this keys values
           const keys = Object.keys(nutrition).reduce((a, v, i) => {
             a.push(v[0].toUpperCase() + v.slice(1));
             return a;
           }, []);
           const value = Object.values(nutrition);
 
+          // insert the html on dom to desing the nutration container
           const html = `     <div
             class="space-y-10 shadow-md rounded-xl absolute  left-1/2 bg-blue-50 -translate-x-1/2 z-10 py-12 px-6 nutration-container text-slate-700 w-full "
           >
             <div class="bg-emerald-200">
               <h3 class="text-2xl text-slate-700 font-bold text-center">
-                Food Nutritional Table
+                ${food.name} Nutritional Table
               </h3>
             </div>
   
-            <div class="grid grid-cols-2 px-6 p-2 mb-10  indg-container ">
-              <p class="font-bold text-sm mb-2">Nutrient</p>
-              <p class="font-bold text-sm mb-2">Amount per 100/g of food</p>
+            <div class="grid grid-cols-2 px-6 p-2 mb-10  indg-container gap-1 ">
+              <p class="font-extrabold text-md mb-2">Nutrient</p>
+              <p class="font-extrabold text-md mb-2">Amount per 100/g of food</p>
               
             </div>
             <div class="text-center">
@@ -273,12 +279,19 @@ const detailsBtnCtn = function (arr) {
 
           keys.forEach((ing, index) => {
             const ingHtml = `<p class="text-xs bg-red-200 font-bold mb-2 p-1">${ing}</p>
-            <p class="text-xs bg-red-200 mb-2 p-1">${value[index]}</p>`;
+            <p class="text-xs bg-red-200 mb-2 p-1 font-bold">${value[index]}</p>`;
 
             indgContainerEl.insertAdjacentHTML("beforeend", ingHtml);
           });
 
           mainContainer.scrollIntoView(mainContainer);
+
+          //below are the things happend once click the details Nutrition button
+
+          // overlayEl.style.height = `${heightofMainContainer}px`;
+          // console.log(heightofMainContainer);
+          overlayEl.classList.remove("hidden");
+          btnShop.classList.add("hidden");
 
           //adding the close function of ingrident details box
           const nutrationContainerEL = document.querySelector(
@@ -288,6 +301,8 @@ const detailsBtnCtn = function (arr) {
           nutrientCloseEL.addEventListener("click", function (e) {
             nutrationContainerEL.remove();
             btnShop.scrollIntoView(btnShop);
+            overlayEl.classList.add("hidden");
+            btnShop.classList.remove("hidden");
           });
         }
       });
